@@ -24,16 +24,14 @@
 # SOFTWARE.
 
 
-rm -rf /var/lib/pacman/sync/*
-rm -rf /etc/pacman.d/*
 TARBALLDIR=$(pwd)
 pushd .
 
 cd /
-tar xvzf $TARBALLDIR/varlibpacmansync.tgz
-tar xvzf $TARBALLDIR/varcachepacmanpkg.tgz
-tar xvzf $TARBALLDIR/etcpacmand.tgz
+tar xvzf $TARBALLDIR/varlibaptlistssync.tgz
+tar xvzf $TARBALLDIR/varcacheaptarchives.tgz
 popd
 
-# do the update.  no "Y" flag because the package database is synced
-pacman -Suu
+# do the update.
+apt-get upgrade
+
