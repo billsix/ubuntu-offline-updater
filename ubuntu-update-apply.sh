@@ -1,6 +1,3 @@
-# arch-update-apply.sh
-
-
 # The MIT License (MIT)
 
 # Copyright (c) 2018 William Emerison Six
@@ -37,4 +34,3 @@ popd
 
 # do the update.
 apt-get upgrade
-

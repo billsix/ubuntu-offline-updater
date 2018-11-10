@@ -1,6 +1,3 @@
-# ubuntu-offile-updater.sh
-
-
 # The MIT License (MIT)
 
 # Copyright (c) 2018 William Emerison Six
@@ -26,9 +23,6 @@
 
 
 
-# ubuntu-offile-updater.sh
-
-
 # create directory into which the updates will go
 filename=sync$(date '+%Y-%m-%d-%H-%M-%S')
 mkdir $filename
@@ -43,5 +37,3 @@ tar -cvf - /var/cache/apt/archives | gzip > varcacheaptarchives.tgz
 # not transferred multiple times.
 rm -rf /var/cache/apt/archives/*
 cd ..
-
-
