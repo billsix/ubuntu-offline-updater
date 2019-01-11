@@ -30,6 +30,10 @@ rm -rf /var/lib/apt/lists/*
 tar xvzf $TARBALLDIR/varlibaptlistssync.tgz
 # do not delete the archives folder, everything there must stay
 tar xvzf $TARBALLDIR/varcacheaptarchives.tgz
+tar xvzf $TARBALLDIR/sourceslistd.tgz
+cp trusted.gpg /etc/apt/trusted.gpg
+
+
 popd
 
 # do the update.

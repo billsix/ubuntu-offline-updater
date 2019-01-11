@@ -32,6 +32,8 @@ cd $filename
 # zip the appropriate files
 tar -cvf - /var/lib/apt/lists | gzip > varlibaptlistssync.tgz
 tar -cvf - /var/cache/apt/archives | gzip > varcacheaptarchives.tgz
+tar -cvf - /etc/apt/sources.list.d/ | gzip > sourceslistd.tgz
+cp /etc/apt/trusted.gpg .
 
 # delete the packages from the local system, so that they are
 # not transferred multiple times.
